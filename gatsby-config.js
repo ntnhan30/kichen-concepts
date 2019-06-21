@@ -8,6 +8,7 @@ module.exports = {
     title: 'Delivery Hero Concepts'
   },
 plugins: [
+  `gatsby-plugin-react-helmet`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
