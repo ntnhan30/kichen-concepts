@@ -1,0 +1,44 @@
+.footer{
+  width: 1440px;
+  height: 213px;
+  background-color: #363b46;
+  border: 2px green solid;
+  
+}
+
+.text {
+  margin: 0 auto;
+  width: 446px;
+  height: 48px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.footer ul {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  border: 1px red solid;
+  max-width: 40%;
+}
+.footer li {
+  list-style: none;        
+  width: 164px;
+  height: 30px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+}
