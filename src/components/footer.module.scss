@@ -1,7 +1,7 @@
 .footer{
   width: 100%;
   background-color: #363b46;
-  border: 2px green solid;
+  // border: 2px green solid;
   
 }
 
@@ -23,8 +23,11 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  border: 1px red solid;
+  // border: 1px red solid;
   max-width: 40%;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 .footer li {
   list-style: none;        

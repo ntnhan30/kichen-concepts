@@ -1,16 +1,16 @@
 .upper {
-    border: 1px solid green;
+    // border: 1px solid green;
     display: flex;
+    // position: absolute;
 }
 
 .text  {
     width:50%;
+    padding: 5% 5% 5% 10%;
     .logo {
-        width: 20rem;
+        width: 25rem;
     }
      h1 {
-            // width: 505px;
-            // height: 272px;
             font-size: 62px;
             font-weight: bold;
             font-style: normal;
@@ -35,33 +35,114 @@
 .bowlContainer {
     width: 50%;
     position: relative;
+    margin-top: 3%;
+    
+
 
     .bowl{
         width: 80%;
         position: absolute;
-        left: 0;
+        left: 6rem;
         top: 8rem;
+    }
+
+    .rectangleContainer{
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+        // border: 4px blue solid;
     }
 
     .rectangle{
         width: 100%;
         position: absolute;
-        left: 6rem;
+        left: 12rem;
         top: 0;
-        z-index: -1;
     }
 }
 
 .below{
+    // position: absolute;
+    // top:70rem;
+    position: relative;
     display: flex;
     flex-direction: row;
-    .oval{
+    justify-content: space-between;
+    // border: 4px blue solid;
+    
+    .ovalContainer{
+        position: relative;
         width:20%;
+        z-index: -1;
+    // border: 4px blue solid;
+
+        .oval{
+            position: absolute;
+            top: -50%;
+            width: 80%;
+        }
     }
-    .concepts{
+    .conceptsContainer{
+        position: relative;
         width:60%;
+        // border: 4px blue solid;
+        
+        .concepts{
+            padding: 7% ; 
+            position: absolute;
+            top: -5rem;
+            h2{
+                // width: 621px;
+                // height: 47px;
+                font-size: 25.3px;
+                font-weight: bold;
+                line-height: 1.23;
+                letter-spacing: -0.84px;
+                text-align: center;
+                color: #000000;
+            }
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between; 
+                align-items: center;
+                padding: 5%;
+    
+                li{
+                    width: 13rem;
+                    list-style: none;
+                }
+            }
+    
+            p {
+                // width: 695px;
+                // height: 133px;
+                font-size: 15.3px;
+                font-weight: 500;
+                line-height: 1.84;
+                letter-spacing: -0.51px;
+                text-align: center;
+                color: #000000;
+            }
+        }
     }
-    .blue{
+    .blueContainer{
         width:20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        // border: 1px solid red;
+        position: relative;
+        overflow: hidden;
+
+        .blue{
+            width: 150%;
+            // borcder: 1px solid black;
+            position: absolute;
+            left: 7rem;
+            top: 5rem;
+
+        }
     }
 }
