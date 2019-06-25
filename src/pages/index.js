@@ -1,10 +1,9 @@
 import React from "react"
-// import ReactDOM from 'react-dom'
-
 import { Link, graphql, useStaticQuery } from "gatsby"
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+
 import Img from "gatsby-image"
 import Head from "../components/head"
+import Plx from "react-plx"
 
 import Layout from "../components/layout"
 import indexStyles from "./index-page.module.scss"
@@ -78,9 +77,22 @@ const IndexPage = () => {
     }
   `)
 
+  const parallaxData = [
+    {
+      start: 0,
+      end: 500,
+      properties: [
+        {
+          startValue: 0,
+          endValue: 150,
+          property: "translateY",
+        },
+      ],
+    },
+  ]
+
   return (
     <Layout>
-    {/* <Parallax pages={2}> */}
       <Head title="Home" />
       <section className={indexStyles.upper}>
         <div className={indexStyles.text}>
@@ -98,54 +110,69 @@ const IndexPage = () => {
           <div className={indexStyles.bowl}>
             <Img fluid={data.bowl.childImageSharp.fluid} />
           </div>
-          <div  className={indexStyles.rectangleContainer} speed={-0.1} style={{ pointerEvents: 'none' }}>
-              <Img className={indexStyles.rectangle} fluid={data.rectangle.childImageSharp.fluid} />
-          </div>
+          <Plx
+            className={indexStyles.rectangleContainer}
+            parallaxData={parallaxData}
+          >
+            <Img
+              className={indexStyles.rectangle}
+              fluid={data.rectangle.childImageSharp.fluid}
+            />
+          </Plx>
         </div>
       </section>
       <section className={indexStyles.below}>
-        <div className={indexStyles.ovalContainer}>
-            <Img className={indexStyles.oval} fluid={data.oval.childImageSharp.fluid} />
-        </div>
+      <Plx
+      className={indexStyles.ovalContainer}
+            parallaxData={parallaxData}
+          >
+          <Img
+            className={indexStyles.oval}
+            fluid={data.oval.childImageSharp.fluid}
+          /> 
+        </Plx>
         <div className={indexStyles.conceptsContainer}>
           <div className={indexStyles.concepts}>
-          <h2>Check out our concepts:</h2>
-          <ul>
-            <li>
-              <Link to="/">
-                <Img fluid={data.yumza.childImageSharp.fluid} />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <Img fluid={data.wingit.childImageSharp.fluid} />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <Img fluid={data.noah.childImageSharp.fluid} />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <Img fluid={data.poked.childImageSharp.fluid} />
-              </Link>
-            </li>
-          </ul>
-          <p>
-            We create amazing delivery experiences by giving you the food you
-            want, whenever and wherever you want it! We ensure dishes are
-            prepared and assembled as quickly as possible, meaning no extra
-            waiting for you. To maintain a high quality service, we regularly
-            check in on our restaurant partners to keep things running smoothly.
-          </p>
+            <h2>Check out our concepts:</h2>
+            <ul>
+              <li>
+                <Link to="/">
+                  <Img fluid={data.yumza.childImageSharp.fluid} />
+                </Link>
+              </li>
+              <li>
+                <Link to="/wingit">
+                  <Img fluid={data.wingit.childImageSharp.fluid} />
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <Img fluid={data.noah.childImageSharp.fluid} />
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <Img fluid={data.poked.childImageSharp.fluid} />
+                </Link>
+              </li>
+            </ul>
+            <p>
+              We create amazing delivery experiences by giving you the food you
+              want, whenever and wherever you want it! We ensure dishes are
+              prepared and assembled as quickly as possible, meaning no extra
+              waiting for you. To maintain a high quality service, we regularly
+              check in on our restaurant partners to keep things running
+              smoothly.
+            </p>
           </div>
         </div>
         <div className={indexStyles.blueContainer}>
-            <Img className={indexStyles.blue} fluid={data.blue.childImageSharp.fluid} />
+          <Img
+            className={indexStyles.blue}
+            fluid={data.blue.childImageSharp.fluid}
+          />
         </div>
       </section>
-    {/* </Parallax> */}
     </Layout>
   )
 }
