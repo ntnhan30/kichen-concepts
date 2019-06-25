@@ -1,5 +1,140 @@
 .upper {
-    background-color: #fed350;
-    height: 50%;
+  background-color: #fed350;
+  max-height: 130vh;
+  display: flex;
+  flex-direction: row;
+  .left {
+    width: 30%;
+    .Sauce_SuperSpicyContainer {
+      position: relative;
+      width: 40%;
+      .Sauce_SuperSpicy {
+        position: absolute;
+        top: -5rem;
+        left: 25rem;
+      }
+    }
+    .bowlFillItContainer {
+      position: relative;
+      width: 120%;
+      .bowlFillIt {
+        position: absolute;
+        left: -15rem;
+      }
+    }
+    .Sauce_SweetContainer {
+      width: 40%;
+      position: relative;
+      .Sauce_Sweet {
+        position: absolute;
+        left: 13rem;
+      }
+    }
+  }
+  .middle {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    .wingItContainer {
+      width: 50%;
+      padding: 15% 0;
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.71;
+      letter-spacing: -0.61px;
+      text-align: center;
+      padding: 7%;
+    }
+
+    p {
+      font-size: 18.3px;
+      font-weight: bold;
+      line-height: 1.71;
+      letter-spacing: -0.61px;
+      text-align: center;
+    }
+  }
+
+  .right {
+    width: 30%;
+    .bowlFillItwhiteContainer {
+      width: 120%;
+      position: relative;
+      .bowlFillItwhite {
+        position: absolute;
+        top: -20rem;
+        left: 0.1rem;
+      }
+    }
+    .Sauce_SuperSpicyContainer {
+      position: relative;
+      width: 40%;
+      .Sauce_SuperSpicy {
+        position: absolute;
+        top: -15rem;
+        left: 15rem;
+      }
+    }
+    .bowlFillItContainer {
+      width: 120%;
+      position: relative;
+      .bowlFillIt {
+        position: absolute;
+        top: -15rem;
+        left: 15rem;
+      }
+    }
+  }
+}
+
+.below {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+     max-width: 70rem;
+      padding: 2% 2% 0 2%;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      color: rgba(54, 59, 70, 0.32);
+    }
+  .concepts {
+      padding: 2%;
+    ul {
+      display: flex;
+      flex-direction: row;
+      // justify-content: space-between;
+      align-items: center;
+      padding: 5%;
+      li {
+        width: 20rem;
+        list-style: none;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.conceptsInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363b46;
+
+    .LogoWhiteContainer{
+        width: 17rem;
+    }
+    p{
+  padding: 25px;
+  max-width: 50rem;;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+
+    }
 }
