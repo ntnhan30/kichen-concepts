@@ -77,7 +77,7 @@ const IndexPage = () => {
     }
   `)
 
-  const parallaxData = [
+  const parallaxRectangle = [
     {
       start: 0,
       end: 500,
@@ -85,6 +85,20 @@ const IndexPage = () => {
         {
           startValue: 0,
           endValue: 150,
+          property: "translateY",
+        },
+      ],
+    },
+  ]
+
+  const parallaxOval = [
+    {
+      start: 0,
+      end: 500,
+      properties: [
+        {
+          startValue: 0,
+          endValue: -150,
           property: "translateY",
         },
       ],
@@ -111,8 +125,8 @@ const IndexPage = () => {
             <Img fluid={data.bowl.childImageSharp.fluid} />
           </div>
           <Plx
+            parallaxData={parallaxRectangle}
             className={indexStyles.rectangleContainer}
-            parallaxData={parallaxData}
           >
             <Img
               className={indexStyles.rectangle}
@@ -121,19 +135,23 @@ const IndexPage = () => {
           </Plx>
         </div>
       </section>
+
       <section className={indexStyles.below}>
       <Plx
-      className={indexStyles.ovalContainer}
-            parallaxData={parallaxData}
-          >
+          parallaxData={parallaxOval}
+          className={indexStyles.ovalContainer}
+        >
           <Img
             className={indexStyles.oval}
             fluid={data.oval.childImageSharp.fluid}
-          /> 
+          />
         </Plx>
+
         <div className={indexStyles.conceptsContainer}>
-          <div className={indexStyles.concepts}>
-            <h2>Check out our concepts:</h2>
+          <div>
+        <h2>Check out our concepts:</h2>
+          </div>
+        <div className={indexStyles.concepts}>  
             <ul>
               <li>
                 <Link to="/">
@@ -156,7 +174,9 @@ const IndexPage = () => {
                 </Link>
               </li>
             </ul>
-            <p>
+        </div>
+        <div>
+        <p>
               We create amazing delivery experiences by giving you the food you
               want, whenever and wherever you want it! We ensure dishes are
               prepared and assembled as quickly as possible, meaning no extra
@@ -164,7 +184,8 @@ const IndexPage = () => {
               check in on our restaurant partners to keep things running
               smoothly.
             </p>
-          </div>
+        </div>
+
         </div>
         <div className={indexStyles.blueContainer}>
           <Img

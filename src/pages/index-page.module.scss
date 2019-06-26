@@ -7,8 +7,15 @@
 .text  {
     width:50%;
     padding: 5% 5% 5% 10%;
+    @media only screen and (max-width: 1400px) {
+        padding: 5% 2% 2% 5%;;
+      }
+  
     .logo {
         width: 25rem;
+        @media only screen and (max-width: 1000px) {
+            width: 15rem;
+            }
     }
      h1 {
             font-size: 62px;
@@ -17,11 +24,22 @@
             font-stretch: normal;
             line-height: 1.18;
             letter-spacing: -1.11px;
-            color: #343b46;  
+            color: #343b46; 
+            @media only screen and (max-width: 1000px) {
+            font-size: 45px;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 35px;
+                }
+            @media only screen and (max-width: 600px) {
+                font-size: 30px;
+              min-width: 25rem;
+                
+                }
         }
     p {
-        // width: 505px;
-        // height: 177px;
+        min-width: 40rem;
         font-size: 20.3px;
         font-weight: 500;
         font-style: normal;
@@ -29,6 +47,10 @@
         line-height: 1.73;
         letter-spacing: -0.67px;
         color: #343b46; 
+
+        @media only screen and (max-width: 1000px) {
+            font-size: 18px;
+            }
     }
 }
 
@@ -36,14 +58,19 @@
     width: 50%;
     position: relative;
     margin-top: 3%;
-    
-
+    @media only screen and (max-width: 1000px) {
+        width: 70%;
+    }
 
     .bowl{
         width: 80%;
         position: absolute;
         left: 6rem;
         top: 8rem;
+        @media only screen and (max-width: 800px) {
+            top: 3rem;
+        }
+      
     }
 
     .rectangleContainer{
@@ -80,27 +107,35 @@
             position: absolute;
             top: -20rem;
             width: 80%;
+            @media only screen and (max-width: 1000px) {
+                width: 100%;
+                }
         }
     }
     .conceptsContainer{
         position: relative;
         width:60%;
+        display: flex;
         // border: 4px blue solid;
+        flex-direction: column;
+        align-items: center;
+        // height: fit-content;
+
         
+        h2{
+
+            font-size: 25.3px;
+            font-weight: bold;
+            line-height: 1.23;
+            letter-spacing: -0.84px;
+            text-align: center;
+            color: #000000;
+        }
         .concepts{
-            padding: 7% ; 
-            position: absolute;
-            top: -5rem;
-            h2{
-                // width: 621px;
-                // height: 47px;
-                font-size: 25.3px;
-                font-weight: bold;
-                line-height: 1.23;
-                letter-spacing: -0.84px;
-                text-align: center;
-                color: #000000;
-            }
+            // padding: 2% ; 
+            // position: absolute;
+            // top: -5rem;
+
     
             ul {
                 display: flex;
@@ -110,21 +145,35 @@
                 padding: 5%;
     
                 li{
-                    width: 13rem;
+                    width: 14rem;
                     list-style: none;
+                    padding: 0 1rem;
+                    @media only screen and (max-width: 1400px) {
+                        width: 12rem;
+                      }
+                      @media only screen and (max-width: 600px) {
+                        width: 10rem;
+                                }
                 }
             }
     
-            p {
-                // width: 695px;
-                // height: 133px;
-                font-size: 15.3px;
-                font-weight: 500;
-                line-height: 1.84;
-                letter-spacing: -0.51px;
-                text-align: center;
-                color: #000000;
-            }
+        }
+        p {
+            // border: 4px blue solid;
+            font-size: 15.3px;
+            font-weight: 500;
+            line-height: 1.84;
+            letter-spacing: -0.51px;
+            text-align: center;
+            color: #000000;
+            width: 100%;
+            padding: 0 10% 3rem 10%;
+            @media only screen and (max-width: 1000px) {
+                padding: 0 0 3rem 0;
+                }
+            @media only screen and (max-width: 600px) {
+                padding: 0;
+                        }
         }
     }
     .blueContainer{
@@ -132,16 +181,20 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        // border: 1px solid red;
         position: relative;
         overflow: hidden;
+        // border: 1px solid black;
 
         .blue{
             width: 150%;
-            // borcder: 1px solid black;
             position: absolute;
             left: 7rem;
             top: 5rem;
+
+            @media only screen and (max-width: 1000px) {
+                width: 170%;
+                left: 3rem;
+                }
 
         }
     }

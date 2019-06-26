@@ -74,7 +74,7 @@ const WingIt = () => {
     }
   `)
 
-  const parallaxData = [
+  const parallaxLeft = [
     {
       start: 0,
       end: 500,
@@ -82,7 +82,21 @@ const WingIt = () => {
         {
           startValue: 0,
           endValue: 150,
-          property: "translateY",
+          property: "translateX",
+        },
+      ],
+    },
+  ]
+
+  const parallaxRight = [
+    {
+      start: 0,
+      end: 500,
+      properties: [
+        {
+          startValue: 150,
+          endValue: 0,
+          property: "translateX",
         },
       ],
     },
@@ -93,19 +107,19 @@ const WingIt = () => {
       <Head title="WingIt" />
       <section className={wingItStyles.upper}>
         <div className={wingItStyles.left}>
-          <Plx  parallaxData={parallaxData} className={wingItStyles.Sauce_SuperSpicyContainer}>
+          <Plx className={wingItStyles.Sauce_SuperSpicyContainer}>
             <Img
               className={wingItStyles.Sauce_SuperSpicy}
               fluid={data.Sauce_SuperSpicy.childImageSharp.fluid}
             />
           </Plx>
-          <Plx  parallaxData={parallaxData} className={wingItStyles.bowlFillItContainer}>
+          <Plx  parallaxData={parallaxLeft} className={wingItStyles.bowlFillItContainer}>
             <Img
               className={wingItStyles.bowlFillIt}
               fluid={data.bowlFillIt.childImageSharp.fluid}
             />
           </Plx>
-          <Plx  parallaxData={parallaxData} className={wingItStyles.Sauce_SweetContainer}>
+          <Plx   className={wingItStyles.Sauce_SweetContainer}>
             <Img className={wingItStyles.Sauce_Sweet} fluid={data.Sauce_Sweet.childImageSharp.fluid} />
           </Plx>
         </div>
@@ -115,25 +129,25 @@ const WingIt = () => {
           </div>
           <div>
           <h2>
-            Wing It! is succulent Korean fried chicken  dishes delivered
+            Wing It! is succulent <span>Korean fried chicken</span>  dishes delivered
             straight to your door.
           </h2>
           <p>
-            We also deliver a whole lot of love beyond our delicious chicken
-            wings, strips and sauces. Our high-quality packaging is designed to
-            keep food crispy and hot upon arrival, while Wing It! wet wipes give
-            you clean and fresh hands after your juicy experience.
+            We also deliver a whole lot of love beyond our <span>delicious chicken 
+            wings, strips and sauces </span> . Our high-quality packaging is designed to
+            keep food <span> crispy and hot upon arrival </span> , while Wing It! wet wipes give
+            you clean and fresh hands after your <span>juicy experience. </span> 
           </p>
           </div>
         </div>
         <div className={wingItStyles.right}>
-          <Plx  parallaxData={parallaxData} className={wingItStyles.bowlFillItwhiteContainer}>
+          <Plx  parallaxData={parallaxRight} className={wingItStyles.bowlFillItwhiteContainer}>
             <Img className={wingItStyles.bowlFillItwhite} fluid={data.bowlFillItwhite.childImageSharp.fluid} />
           </Plx>
-          <Plx  parallaxData={parallaxData} className={wingItStyles.Sauce_SuperSpicyContainer}>
+          <Plx  className={wingItStyles.Sauce_SuperSpicyContainer}>
             <Img className={wingItStyles.Sauce_SuperSpicy} fluid={data.Sauce_SuperSpicy.childImageSharp.fluid} />
           </Plx>
-          <Plx  parallaxData={parallaxData} className={wingItStyles.bowlFillItContainer}>
+          <Plx  parallaxData={parallaxRight} className={wingItStyles.bowlFillItContainer}>
             <Img className={wingItStyles.bowlFillIt} fluid={data.bowlFillIt.childImageSharp.fluid} />
           </Plx>
         </div>
