@@ -51,6 +51,9 @@
         @media only screen and (max-width: 1000px) {
             font-size: 18px;
             }
+        @media only screen and (max-width: 600px) {
+            min-width: 30rem;
+            }
     }
 }
 
@@ -70,6 +73,10 @@
         @media only screen and (max-width: 800px) {
             top: 3rem;
         }
+
+        @media only screen and (max-width: 600px) {
+            top: 2rem;
+        }
       
     }
 
@@ -85,6 +92,9 @@
         position: absolute;
         left: 12rem;
         top: 0;
+        @media only screen and (max-width: 600px) {
+        left: 9rem;
+        }
     }
 }
 
@@ -96,6 +106,7 @@
     flex-direction: row;
     justify-content: space-between;
     // border: 4px blue solid;
+    width: 100%;
     
     .ovalContainer{
         position: relative;
@@ -110,16 +121,21 @@
             @media only screen and (max-width: 1000px) {
                 width: 100%;
                 }
+                @media only screen and (max-width: 800px) {
+                    width:0;
+                            }
         }
     }
     .conceptsContainer{
         position: relative;
         width:60%;
         display: flex;
-        // border: 4px blue solid;
+        // border: 4px bluec solid;
         flex-direction: column;
         align-items: center;
-        // height: fit-content;
+        @media only screen and (max-width: 800px) {
+            width:100%;
+                    }
 
         
         h2{
@@ -135,27 +151,44 @@
             // padding: 2% ; 
             // position: absolute;
             // top: -5rem;
+            // border: 4px blue solid;
+            width: 100%;
+
 
     
             ul {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between; 
+                // flex-direction: row;
+                width: 100%;
                 align-items: center;
-                padding: 5%;
-    
+                justify-content: center; 
+
+                // padding: 5%;
+                // overflow-x: scroll;
+                overflow-x: auto;
+                // border: 4px blue solid;
+                @media only screen and (max-width: 1000px) {
+                justify-content: flex-start; 
+                  }
+                
+                
                 li{
-                    width: 14rem;
+                    // justify-content: center; 
+                    // width: 14rem;
                     list-style: none;
-                    padding: 0 1rem;
+                    flex: 0 0 14rem;
+                // border: 4px blue solid;
+                    margin-right: 40px;
                     @media only screen and (max-width: 1400px) {
-                        width: 12rem;
+                        flex: 0 0 12rem;
+
                       }
                       @media only screen and (max-width: 600px) {
-                        width: 10rem;
+                        flex: 0 0 10rem
                                 }
                 }
             }
+
     
         }
         p {
@@ -171,8 +204,8 @@
             @media only screen and (max-width: 1000px) {
                 padding: 0 0 3rem 0;
                 }
-            @media only screen and (max-width: 600px) {
-                padding: 0;
+            @media only screen and (max-width: 800px) {
+                padding: 1%;
                         }
         }
     }
@@ -195,7 +228,9 @@
                 width: 170%;
                 left: 3rem;
                 }
-
+                @media only screen and (max-width: 800px) {
+                    width:0;
+                            }
         }
     }
 }

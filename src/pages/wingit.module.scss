@@ -1,13 +1,33 @@
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+
+
 .upper {
   background-color: #fed350;
-  max-height: 130vh;
+  max-height: 115vh;
   display: flex;
   flex-direction: row;
+  // border: 2px red solid;
+
   .left {
     width: 30%;
+    @media only screen and (max-width: 1000px) {
+      width: 10%;
+    }
     .Sauce_SuperSpicyContainer {
       position: relative;
       width: 40%;
+      min-width: 10rem;
+      @media only screen and (max-width: 600px) {
+        width: 0;
+        min-width: 0;
+
+      }
+
       .Sauce_SuperSpicy {
         position: absolute;
         top: -5rem;
@@ -17,18 +37,36 @@
     .bowlFillItContainer {
       position: relative;
       width: 120%;
-      
+      min-width: 40rem;
+
       .bowlFillIt {
         position: absolute;
         left: -15rem;
+        @media only screen and (max-width: 1000px) {
+          left: -25rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+          top: 10rem;
+          left: -25rem;
+        }
       }
     }
     .Sauce_SweetContainer {
       width: 40%;
       position: relative;
+      min-width: 10rem;
       .Sauce_Sweet {
         position: absolute;
         left: 13rem;
+        @media only screen and (max-width: 1000px) {
+          top: 15rem;
+          left: 5rem;
+        }
+        @media only screen and (max-width: 600px) {
+          top: 15rem;
+          left: -4rem;
+        }
       }
     }
   }
@@ -37,10 +75,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
+    // border: 2px red solid;
+
+    @media only screen and (max-width: 1000px) {
+      width: 80%;
+    }
 
     .wingItContainer {
       width: 50%;
-      padding: 15% 0;
+      padding: 20% 0 15% 0;
+      max-width: 25rem;
+      @media only screen and (max-width: 1000px) {
+        padding: 5% 0;
+      }
     }
     h2 {
       font-size: 3rem;
@@ -48,7 +96,8 @@
       line-height: 1.71;
       letter-spacing: -0.61px;
       text-align: center;
-      padding: 7%;
+      padding: 5%;
+      // border: 2px red solid;
 
       span {
         background-color: #ffffff;
@@ -61,6 +110,8 @@
       line-height: 1.71;
       letter-spacing: -0.61px;
       text-align: center;
+      // border: 2px red solid;
+
       span {
         background-color: #ffffff;
       }
@@ -69,51 +120,87 @@
 
   .right {
     width: 30%;
+
+    @media only screen and (max-width: 1000px) {
+      width: 10%;
+    }
     .bowlFillItwhiteContainer {
       width: 120%;
       position: relative;
-      
+      min-width: 40rem;
+
       .bowlFillItwhite {
         position: absolute;
         top: -20rem;
         left: 0.1rem;
+
+        @media only screen and (max-width: 1400px) {
+          top: -20rem;
+          left: -10rem;
+        }
+        @media only screen and (max-width: 1000px) {
+          top: -10rem;
+          left: -30rem;
+        }
       }
     }
     .Sauce_SuperSpicyContainer {
       position: relative;
       width: 40%;
+      min-width: 10rem;
+
       .Sauce_SuperSpicy {
         position: absolute;
         top: -15rem;
         left: 15rem;
+        @media only screen and (max-width: 1000px) {
+          top: 0rem;
+          left: 0rem;
+        }
       }
     }
     .bowlFillItContainer {
       width: 120%;
       position: relative;
+      min-width: 40rem;
+      @media only screen and (max-width: 600px) {
+        width: 0;
+        min-width: 0;
+      }
       .bowlFillIt {
         position: absolute;
-        top: -15rem;
+        top: -20rem;
         left: 15rem;
+
+        @media only screen and (max-width: 1400px) {
+          top: -15rem;
+          left: 1rem;
+        }
+        @media only screen and (max-width: 1000px) {
+          top: 5rem;
+          left: -20rem;
+        }
+
+      
       }
     }
   }
 }
 
 .below {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-     max-width: 70rem;
-      padding: 5% 2% 0 2%;
-      font-size: 16px;
-      font-weight: 600;
-      text-align: center;
-      color: rgba(54, 59, 70, 0.32);
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    max-width: 70rem;
+    padding: 5% 2% 0 2%;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(54, 59, 70, 0.32);
+  }
   .concepts {
-      padding: 0 2% 2% 2%;
+    padding: 0 2% 2% 2%;
     ul {
       display: flex;
       flex-direction: row;
@@ -129,21 +216,40 @@
   }
 }
 
-.conceptsInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #363b46;
+.conceptsInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #363b46;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  //  align-content: center;
+  }
+  
 
-    .LogoWhiteContainer{
-        width: 17rem;
+  .LogoWhiteContainer {
+    width: 17rem;
+    // border: #fed350 2px solid;
+    @media only screen and (max-width: 600px) {
+    margin-top: 25px;
     }
-    p{
-  padding: 25px;
-  max-width: 50rem;;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffffff;
 
+  }
+  p {
+    // border: #fed350 2px solid;
+    text-align: center;
+    padding: 25px;
+    max-width: 50rem;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    span {
+      font-weight: 800;
+      // color: #fed350;
     }
+    @media only screen and (max-width: 600px) {
+    padding: 25px;
+    margin-top: 10px;
+      }
+  }
 }

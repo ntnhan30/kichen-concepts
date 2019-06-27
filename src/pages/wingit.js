@@ -179,7 +179,7 @@ const WingIt = () => {
           </div>
         </Link>
         <p>
-        Wing It! is part of the Delivery Hero Concepts family -  find out more about us here.
+        Wing It! is part of the <span>Delivery Hero Concepts </span> Delivery Hero Concepts family -  find out more about us <span>here.</span>
         </p>
       </section>
 
