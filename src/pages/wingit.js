@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
+
 import Img from "gatsby-image"
 import Head from "../components/head"
 import Plx from "react-plx"

@@ -8,6 +8,13 @@ module.exports = {
     title: 'Delivery Hero Concepts'
   },
 plugins: [
+ 
+  {
+    resolve: `gatsby-plugin-s3`,
+    options: {
+        bucketName: 'concepts.deliveryhero.com'
+    },
+},
   `gatsby-plugin-react-helmet`,
   {
     resolve: `gatsby-source-filesystem`,
@@ -18,6 +25,7 @@ plugins: [
   },
   'gatsby-plugin-sass',
   `gatsby-plugin-sharp`, 
-  `gatsby-transformer-sharp`
+  `gatsby-transformer-sharp`,
+  `gatsby-plugin-offline`
 ]
 }

@@ -162,30 +162,30 @@
                 width: 100%;
                 align-items: center;
                 justify-content: center; 
+                flex-wrap: wrap;
 
-                // padding: 5%;
-                // overflow-x: scroll;
-                overflow-x: auto;
+          
+               
                 // border: 4px blue solid;
-                @media only screen and (max-width: 1000px) {
-                justify-content: flex-start; 
-                  }
+                // @media only screen and (max-width: 1000px) {
+                // justify-content: flex-start; 
+                //   }
                 
                 
                 li{
-                    // justify-content: center; 
-                    // width: 14rem;
+                    width: 14rem;
+                    padding: 5px; 
                     list-style: none;
-                    flex: 0 0 14rem;
+                    // flex: 0 0 14rem;
                 // border: 4px blue solid;
                     margin-right: 40px;
-                    @media only screen and (max-width: 1400px) {
-                        flex: 0 0 12rem;
+                    // @media only screen and (max-width: 1400px) {
+                    //     flex: 0 0 12rem;
 
-                      }
-                      @media only screen and (max-width: 600px) {
-                        flex: 0 0 10rem
-                                }
+                    //   }
+                    //   @media only screen and (max-width: 600px) {
+                    //     flex: 0 0 10rem
+                    //             }
                 }
             }
 
